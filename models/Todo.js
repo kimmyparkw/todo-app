@@ -46,7 +46,7 @@ class Todo {
     return db
     .oneOrNone(
       `UPDATE todos SET
-      tite = $/title/
+      title = $/title/,
       description = $/description/,
       status = $/status/
       WHERE id = $/id/
