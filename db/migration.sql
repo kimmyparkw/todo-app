@@ -1,0 +1,12 @@
+CREATE TABLE todos (
+id SERIAL PRIMARY KEY,
+description VARCHAR (255) NOT NULL,
+isDone BOOLEAN,
+createdOn DATE NOT NULL DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  passwordDigest VARCHAR(255)
+);
