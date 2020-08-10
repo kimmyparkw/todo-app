@@ -3,7 +3,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #f0ece3;
-
 }
 
 nav {
@@ -25,6 +24,9 @@ li {
 
 a {
   color: #596e79;
+  margin-top: 30px;
+  font-family: 'Cormorant', serif;
+  font-size: 1.2rem;
 }
 
 /* main page styles */
@@ -132,4 +134,40 @@ button, input {
   color: #596e79;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+/* add/edit new todo styles */
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.add-item {
+  margin: 5px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-todo-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form input {
+  margin: 5px 10px;
+  font-size: 1.3rem;
+}
+
+/* show the individual id page */
+.todo-single-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
