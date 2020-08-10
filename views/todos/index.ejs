@@ -1,6 +1,6 @@
 <%- include('../partials/boilerplate') %>
 <div class="todos-container">
-  <button type="button" name="newCard"><a href="/todo/add">Add new todo</a></button>
+  <button class="add-todo" type="button" name="newCard"><a href="/todo/add">Add new todo</a></button>
   <% for (let todo of todos) { %>
     <%- include('../partials/todo-item', { todo }) %>
   <% } %>

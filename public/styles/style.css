@@ -1,0 +1,135 @@
+/* boilerplate styles */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0ece3;
+
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #dfd3c3;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: 'Cormorant', serif;
+}
+
+a {
+  color: #596e79;
+}
+
+/* main page styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+   margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 5rem;
+}
+
+.todo-page {
+  padding: 10px 50px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.5rem;
+  background-color: #dfd3c3;
+  border-radius: 5px;
+}
+
+/* end.ejs styling */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* about page styles */
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+p {
+  width: 70%;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #596e79;
+}
+
+/* todo page styles */
+
+.todos-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.add-todo {
+  width: 20;
+  background-color: #dfd3c3;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 40%;
+  border-radius: 10px;
+  background-color: #c7b198;
+}
+
+.upper-todo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px auto;
+}
+
+span {
+  margin: auto 20px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.5rem;
+
+
+}
+
+.lower-todo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 8px auto;
+}
+
+button, input {
+  font-family: 'Cormorant', serif;
+  font-size: 1rem;
+  color: #596e79;
+  border: 1px solid black;
+  border-radius: 5px;
+}

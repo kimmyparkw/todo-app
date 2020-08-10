@@ -23,8 +23,9 @@ const todoController = {
 
   create(req, res, next) {
     new Todo({
+      title: req.body.title,
       description: req.body.description,
-      completed: req.body.completed,
+      status: req.body.status,
     })
     .save()
     .then((todo) => {
@@ -50,9 +51,7 @@ const todoController = {
       return todo.delete()
     })
     .then(() => {
-      res.json({
-        message: 'Deleted successfully'
-      })
+      res.redirect('/todo')
     })
     .catch((err) => next(err))
   }

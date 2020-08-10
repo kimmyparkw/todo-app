@@ -1,12 +1,14 @@
 <div class="todo">
   <div class="upper-todo">
-    <span><%= todo.description %></span>
-    <span><%= todo.completed %></span>
+    <span><%= todo.title %></span>
+    <span><%= todo.status %></span>
   </div>
   <div class="lower-todo">
     <button type="button" name="info"><a href="/todo/<%= todo.id %>">Info</a></button>
     <button type="button" name="edit"><a href="/todo/<%= todo.id %>/edit">Edit</a></button>
-    <button type="button" name="delete">Delete</button>
-  </div>
+    <form method="POST" action="/todo/<%= todo.id %>?_method=DELETE">
+      <input type="submit"value="Delete">
+    </form>
 
+  </div>
 </div>

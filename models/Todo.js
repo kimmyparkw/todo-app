@@ -1,11 +1,12 @@
 const db = require('../db/config')
 
 class Todo {
-  constructor({ id, description, completed, createdon }) {
+  constructor({ id, title, description, status, created_on }) {
     this.id = id || null;
+    this.title = title;
     this.description = description;
-    this.completed = completed;
-    this.createdon = createdon || null;
+    this.status = status;
+    this.created_on = created_on || null;
   }
 
   static getAll() {
@@ -30,8 +31,8 @@ class Todo {
   save() {
     return db
     .one(
-      `INSERT INTO todos (description, completed)
-      VALUES ($/description/, $/completed/)
+      `INSERT INTO todos (title, description, status)
+      VALUES ($/title/, $/description/, $/status/)
       RETURNING *`,
         this
     )
@@ -45,8 +46,9 @@ class Todo {
     return db
     .oneOrNone(
       `UPDATE todos SET
+      tite = $/title/
       description = $/description/,
-      completed = $/completed/
+      status = $/status/
       WHERE id = $/id/
       RETURNING *`,
         this
